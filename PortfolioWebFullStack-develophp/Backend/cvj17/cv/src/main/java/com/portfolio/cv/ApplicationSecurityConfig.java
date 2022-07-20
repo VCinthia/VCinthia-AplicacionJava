@@ -71,7 +71,8 @@ public class ApplicationSecurityConfig extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(HttpSecurity http) throws Exception{
         http.csrf().disable()
-                .authorizeHttpRequests().antMatchers(/*HttpMethod.POST,*/"/*")         
+                .authorizeHttpRequests()
+                .antMatchers(/*HttpMethod.POST,*/"/**")         
                 .permitAll()
                 .anyRequest()
                 .authenticated()
@@ -92,7 +93,7 @@ public class ApplicationSecurityConfig extends WebSecurityConfigurerAdapter {
             Exception {
        auth
               .inMemoryAuthentication()
-              .withUser("votacinthia@gmail.com")
+              .withUser("cv@gmail.com")
               .password("16011992")
               .roles("ADMIN");
    }*/

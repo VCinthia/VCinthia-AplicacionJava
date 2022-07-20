@@ -70,7 +70,14 @@
 		</dependency>
                 
                  <!--agrego dependecias varias-->
-                 
+                 <!--Revisar estas dep de abajo-->
+                 <dependency>
+                        <groupId>org.springframework</groupId>
+                        <artifactId>spring-beans</artifactId>
+                        <version>5.3.19</version>
+                </dependency>
+                
+                 <!--................................-->
                 <dependency><!--ver si esta dependencia funciona-->
                         <groupId>org.springframework.data</groupId>
                         <artifactId>spring-data-jpa</artifactId>
@@ -80,6 +87,7 @@
                         <groupId>com.h2database</groupId>
                         <artifactId>h2</artifactId>
                         <version>1.4.200</version>
+                        <scope>runtime</scope>
                 </dependency>                
                 <dependency>
                         <groupId>org.eclipse.persistence</groupId>
