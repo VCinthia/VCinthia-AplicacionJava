@@ -28,5 +28,12 @@ public class Persona {
     @Size(min =1, max = 50, message = "Por favor cumplir con la longitud")
     private String img;
     
+    @NotNull
+    @Size(min =1, max = 300, message = "Por favor cumplir con la longitud")
+    private String sobremi;
+    
+    @NotNull
+    @Size(min =1, max = 50, message = "Por favor cumplir con la longitud")
+    private String rol;
     
 }

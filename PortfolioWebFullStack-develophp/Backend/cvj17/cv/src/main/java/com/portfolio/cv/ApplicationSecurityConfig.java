@@ -19,12 +19,13 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
 
 import javax.persistence.EntityManager;
 import org.springframework.http.HttpMethod;
+import org.springframework.web.bind.annotation.CrossOrigin;
 
 
 @Configuration
 @EnableWebSecurity(debug = true)
 //@EnableGlobalMethodSecurity(prePostEnabled = true)
-
+@CrossOrigin(origins="http://localhost:4200")
 public class ApplicationSecurityConfig extends WebSecurityConfigurerAdapter {
     @Autowired
     private UserLoginRepository userRepository;
@@ -72,7 +73,7 @@ public class ApplicationSecurityConfig extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http) throws Exception{
         http.csrf().disable()
                 .authorizeHttpRequests()
-                .antMatchers(/*HttpMethod.POST,*/"/**")         
+                .antMatchers(/*HttpMethod.POST,*/"/api/**")/*cambie (/**) */     
                 .permitAll()
                 .anyRequest()
                 .authenticated()

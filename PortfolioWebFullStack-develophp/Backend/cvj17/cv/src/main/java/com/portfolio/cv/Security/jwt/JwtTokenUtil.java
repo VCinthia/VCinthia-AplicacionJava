@@ -22,7 +22,7 @@ import org.springframework.security.config.annotation.web.configuration.EnableWe
 
 public class JwtTokenUtil {
     private static final Logger LOGGER=LoggerFactory.getLogger(JwtTokenUtil.class);
-    private static final long EXPIRE_DURATION=3*60*60*1000;//3 horas dura el token
+    private static final long EXPIRE_DURATION=12*60*60*1000;//12 horas dura el token
    
     @Value("${app.jwt.secret}")
     private String secretKey;
