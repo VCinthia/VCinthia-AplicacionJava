@@ -24,7 +24,7 @@ public class AuthApi {
         AuthenticationManager authManager;
     @Autowired
         JwtTokenUtil jwtTokenUtil;
-    @PostMapping("/api/login")//ver
+    @PostMapping("/api/login")//ok
     public ResponseEntity<?> login(@RequestBody @Valid AuthRequest request){
         try{
             Authentication authentication = authManager.authenticate(
