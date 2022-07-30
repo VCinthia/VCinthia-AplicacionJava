@@ -24,7 +24,8 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 @Configuration
 @EnableWebSecurity(debug = true)
 //@EnableGlobalMethodSecurity(prePostEnabled = true)
-@CrossOrigin(origins="http://localhost:4200")
+//@CrossOrigin(origins="http://localhost:4200")
+@CrossOrigin(origins="*")
 public class ApplicationSecurityConfig extends WebSecurityConfigurerAdapter {
     @Autowired
     private UserLoginRepository userRepository;
