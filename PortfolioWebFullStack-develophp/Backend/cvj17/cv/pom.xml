@@ -14,7 +14,7 @@
 	<name>cv</name>
 	<description>Portfolio Cinthia Vota</description>
 	<properties>
-		<java.version>16</java.version><!-- ver si funciona con versiones anteriores-->
+		<java.version>17</java.version><!-- ver si funciona con versiones anteriores-->
 	</properties>            
 	<dependencies>
                     
